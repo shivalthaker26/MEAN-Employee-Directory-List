@@ -1,0 +1,36 @@
+<div class="button-row">
+  <a mat-raised-button color="primary" (click)="employeeDetails()"><mat-icon>show</mat-icon></a>
+</div>
+<form [formGroup]="employeeForm" (ngSubmit)="onFormSubmit(employeeForm.value)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="NAME" formControlName="name"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!employeeForm.get('name').valid && employeeForm.get('name').touched">Please enter NAME</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Title" formControlName="title"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!employeeForm.get('title').valid && employeeForm.get('title').touched">Please enter Employee Title</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Position" formControlName="position"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!employeeForm.get('position').valid && employeeForm.get('position').touched">Please enter Employee Position</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Date Joined" formControlName="date_joined"
+           [errorStateMatcher]="matcher"></textarea>
+    <mat-error>
+      <span *ngIf="!employeeForm.get('date_joined').valid && employeeForm.get('date_joined').touched">Please enter Employee Joining Date</span>
+    </mat-error>
+  </mat-form-field>
+  <div class="button-row">
+    <button type="submit" [disabled]="!employeeForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+  </div>
+</form>

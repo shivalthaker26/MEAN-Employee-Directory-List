@@ -1,0 +1,22 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  min-width: 300px;
+  overflow: auto;
+}
+
+.name-col {
+  flex: 0 0 100px !important;
+  white-space: unset !important;
+}
+
+.img-col {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.button-row {
+  margin: 10px 0;
+}
