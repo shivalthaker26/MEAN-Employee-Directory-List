@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
-Make sure MongoDB Community Edition is Installed. Other please follow https://docs.mongodb.com/manual/installation/ for MongoDB Installation Tutorials
+Make sure MongoDB Community Edition is Installed. If not, please follow https://docs.mongodb.com/manual/installation/ for MongoDB Installation Tutorials
 
 ## Running the app
 
